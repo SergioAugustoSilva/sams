@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portefólio</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Estilos gerais */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #005bea, #00c6fb);
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00c6fb;
+        }
+
+        section {
+            padding: 50px 20px;
+            min-height: 100vh;
+        }
+
+        section#about {
+            background: #f4f4f4;
+        }
+
+        section#portfolio {
+            background: #fff;
+        }
+
+        section#contact {
+            background: #222;
+            color: white;
+        }
+
+        /* Portfólio */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background: #f4f4f4;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        /* Formulário de contacto */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form input, form textarea, form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        form button {
+            background: #005bea;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        form button:hover {
+            background: #003e99;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#about">Sobre Mim</a></li>
+            <li><a href="#portfolio">Portefólio</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>O Meu Portefólio</h1>
+        <p>Design, Desenvolvimento Web e Muito Mais</p>
+    </header>
+
+    <!-- Secção Sobre Mim -->
+    <section id="about">
+        <h2>Sobre Mim</h2>
+        <p>Sou um designer e desenvolvedor apaixonado por criar soluções criativas e funcionais para os meus clientes. Especializo-me em design gráfico, desenvolvimento de sites e experiências interativas.</p>
+    </section>
+
+    <!-- Secção Portefólio -->
+    <section id="portfolio">
+        <h2>Portefólio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Projeto 1">
+                <p>Projeto 1 - Design Gráfico</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Projeto 2">
+                <p>Projeto 2 - Desenvolvimento Web</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Projeto 3">
+                <p>Projeto 3 - Aplicações</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção Contacto -->
+    <section id="contact">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" name="name" placeholder="O seu nome" required>
+            <input type="email" name="email" placeholder="O seu e-mail" required>
+            <textarea name="message" placeholder="A sua mensagem"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
